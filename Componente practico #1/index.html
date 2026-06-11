@@ -1,1 +1,130 @@
-
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vectores</title>
+</head>
+<body>
+    <table border="4" align="center">
+        <thead>
+            <tr>
+                <th colspan="2" align="center">Ejercicios con vectores.</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Dimensión del arreglo:</td>
+                <td colspan="2"><select id="dimensión">
+                    <option value="4" selected>4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                    <option value="15">15</option>
+                    <option value="20">20</option>
+                    <option value="25">25</option>
+                    <option value="30">30</option>
+                </select></td>
+            </tr>
+            <tr>
+                <td>Ingrese valor a buscar:</td>
+                <td colspan="2"><Input type="text" id="busqueda" maxlength="4" size="5"></Input></td>
+            </tr>
+        </tbody>
+        <tr>
+            <td colspan="2">
+                <table id="vector-numerico" border="1" cellpading = "1">
+                    <thead>
+                        <tr>
+                            <th colspan="10">Vector numerico de N elementos</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>0</td>
+                            <td>1</td>
+                            <td>2</td>
+                            <td>3</td>
+                            <td>4</td>
+                            <td>5</td>
+                            <td>6</td>
+                            <td>7</td>
+                            <td>8</td>
+                            <td>9</td>
+                        </tr>
+                        <tr>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                        </tr>
+                        <tr><td colspan="10" align="center">
+                                <button id="cargar">Cargar Vector</button>
+                                <button id="vaciar">Vaciar Vector</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="10" align="center">
+                                <button id="presentar">Presentar Vector</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="10" align="center">
+                                <button id="mayor">Número mayor</button>
+                                <button id="menor">Número menor</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="10" align="center">
+                                <button id="sumar">Suma de valores</button>
+                                <button id="producto">Producto de valores</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="10" align="center">
+                                <button id="moda">Moda</button>
+                                <button id="mediana">Mediana</button>
+                                <button id="media">Media</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="10"  align="center">
+                                <button onclick="ordenar('burbuja','asc')">Burbuja ASC</button>
+                                <button onclick="ordenar('burbuja','desc')">Burbuja DESC</button>
+                                <button onclick="ordenar('seleccion','asc')">Selección ASC</button>
+                                <button onclick="ordenar('seleccion','desc')">Selección DESC</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+    </table>
+    <br>
+    <div id="resultado">
+        <h3>Resultado</h3>
+        <p>Número mayor: <span id="res-mayor"></span></p>
+        <p>Número menor: <span id="res-menor"></span></p>
+        <p>Suma de valores: <span id="res-suma"></span></p>
+        <p>Producto de Valores: <span id="res-producto"></span></p>
+        <p>Moda: <span id="res-moda"></span></p>
+        <p>Mediana: <span id="res-mediana"></span></p>
+        <p>Media: <span id="res-media"></span></p>
+        <P>Ordenamiento</P>
+        <p>Burbuja ASC: <span id="res-burbuja-asc"></span></p>
+        <p>Burbuja DESC: <span id="res-burbuja-desc"></span></p>
+        <p>Selección ASC: <span id="res-seleccion-asc"></span></p>
+        <p>Selección DESC: <span id="res-seleccion-desc"></span></p>
+    </div>
+    <script src="dimensión.js"></script>
+</body>
+</html>
