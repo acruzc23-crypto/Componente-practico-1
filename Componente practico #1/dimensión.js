@@ -1,4 +1,3 @@
-
 const celdas = () => document.querySelectorAll("#vector-numerico tbody tr:nth-child(2) td");
 const obtenerVector = () => [...celdas()].map(td => parseInt(td.textContent));
 const pintarVector = (vector) => {
